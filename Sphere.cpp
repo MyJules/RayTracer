@@ -4,9 +4,9 @@ bool Sphere::hit(const Ray &ray, float tMin, float tMax, HitRecord &record) cons
 {
     Vec3_t oc = ray.origin() - m_center;
     Vec3_v a = Vec3_t::DotProduct(ray.direction(), ray.direction());
-    Vec3_v b = 2.0 * Vec3_t::DotProduct(oc, ray.direction());
+    Vec3_v b = Vec3_t::DotProduct(oc, ray.direction());
     Vec3_v c = Vec3_t::DotProduct(oc, oc) - m_radius * m_radius;
-    Vec3_v discriminant = b * b - 4 * a * c;
+    Vec3_v discriminant = b * b -  a * c;
 
     if(discriminant > 0)
     {
