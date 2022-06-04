@@ -2,5 +2,5 @@
 
 #include <mathfu/vector.h>
 
-using Vector3_v = double;
-using Vector3_t = mathfu::Vector<Vector3_v, 3>;
+using Vec3_v = double;
+using Vec3_t = mathfu::Vector<Vec3_v, 3>;

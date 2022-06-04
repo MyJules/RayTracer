@@ -14,7 +14,10 @@ include_directories(lib/mathfu/dependencies/vectorial/include)
 set(Src 
 Ray.h
 Ray.cpp
-Vector3.h)
+Vector3.h
+Hitable.h
+Sphere.h
+Sphere.cpp)
 
 add_executable(RayTracer main.cpp ${Src})
 
