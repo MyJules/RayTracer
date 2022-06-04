@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Vector3.h"
-#include "Ray.h"
+#include <Vector3.h>
+#include <Ray.h>
 
 #include <vector>
 #include <algorithm>

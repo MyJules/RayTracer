@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Vector3.h"
-#include "Hitable.h"
+#include <Vector3.h>
+#include <Hitable.h>
 
 class Sphere : public Hitalbe
 {

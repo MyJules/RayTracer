@@ -4,6 +4,8 @@ project(RayTracer VERSION 0.1.0)
 include(CTest)
 enable_testing()
 
+include_directories(src)
+
 #add mathfu
 set(mathfu_build_benchmarks OFF CACHE BOOL "")
 set(mathfu_build_tests OFF CACHE BOOL "")
@@ -11,15 +13,20 @@ add_subdirectory(lib/mathfu mathfu)
 include_directories(lib/mathfu/include)
 include_directories(lib/mathfu/dependencies/vectorial/include)
 
-set(Src 
-Ray.h
-Ray.cpp
-Vector3.h
-Hitable.h
-Sphere.h
-Sphere.cpp)
+set(SrcFolder src)
 
-add_executable(RayTracer main.cpp ${Src})
+set(Src
+${SrcFolder}/Ray.h
+${SrcFolder}/Ray.cpp
+${SrcFolder}/Vector3.h
+${SrcFolder}/Hitable.h
+${SrcFolder}/Sphere.h
+${SrcFolder}/Sphere.cpp
+${SrcFolder}/Renderer.h
+${SrcFolder}/Camera.h
+${SrcFolder}/Camera.cpp)
+
+add_executable(RayTracer ${SrcFolder}/main.cpp ${Src})
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
