@@ -23,8 +23,11 @@ ${SrcFolder}/Hitable.h
 ${SrcFolder}/Sphere.h
 ${SrcFolder}/Sphere.cpp
 ${SrcFolder}/Renderer.h
+${SrcFolder}/Renderer.cpp
 ${SrcFolder}/Camera.h
-${SrcFolder}/Camera.cpp)
+${SrcFolder}/Camera.cpp
+${SrcFolder}/Material.h
+)
 
 add_executable(RayTracer ${SrcFolder}/main.cpp ${Src})
 

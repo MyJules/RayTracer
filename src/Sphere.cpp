@@ -16,6 +16,7 @@ bool Sphere::hit(const Ray &ray, float tMin, float tMax, HitRecord &record) cons
             record.t = temp;
             record.p = ray.pointAtParameter(record.t);
             record.normal = (record.p - m_center) / Vec3_t(m_radius, m_radius, m_radius);
+            record.material = m_material;
             return true;
         }
         temp = (-b + sqrt(b*b-a*c))/a;
@@ -24,6 +25,7 @@ bool Sphere::hit(const Ray &ray, float tMin, float tMax, HitRecord &record) cons
             record.t = temp;
             record.p = ray.pointAtParameter(record.t);
             record.normal = (record.p - m_center) / Vec3_t(m_radius, m_radius, m_radius);
+            record.material = m_material;
             return true;
         }
     }
