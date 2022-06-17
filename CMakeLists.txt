@@ -27,6 +27,8 @@ ${SrcFolder}/Renderer.cpp
 ${SrcFolder}/Camera.h
 ${SrcFolder}/Camera.cpp
 ${SrcFolder}/Material.h
+${SrcFolder}/SceneGenerator.h
+${SrcFolder}/SceneGenerator.cpp
 )
 
 add_executable(RayTracer ${SrcFolder}/main.cpp ${Src})

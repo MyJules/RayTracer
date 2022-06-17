@@ -2,7 +2,7 @@
 
 #include <Material.h>
 
-Vec3_t color(const Ray &ray, const HitableArr_t &world, int depth)
+Vec3_t render(const Ray &ray, const HitableArr_t &world, int depth)
 {
     HitRecord rec;
     bool hitAnything = false;
@@ -26,10 +26,10 @@ Vec3_t color(const Ray &ray, const HitableArr_t &world, int depth)
     {
         Ray scattered;
         Vec3_t attenuation; 
-        if(depth < 50 && closestRec.material->scatter(ray, closestRec, attenuation, scattered))
+        if(depth < 80 && closestRec.material->scatter(ray, closestRec, attenuation, scattered))
         {
             //Vec3_t target = rec.p + rec.normal + randomInUnitSphere();
-            return attenuation * color(scattered, world, depth + 1);
+            return attenuation * render(scattered, world, depth + 1);
         }else
         {
             return Vec3_t(0, 0, 0);

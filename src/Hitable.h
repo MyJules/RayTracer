@@ -8,13 +8,15 @@
 #include <memory>
 
 class Material;
-
 class Hitalbe;
 
 using HitableArr_t = std::vector<std::unique_ptr<Hitalbe>>;
 
 struct HitRecord
 {
+    HitRecord() = default;
+    ~HitRecord() = default;
+
     float t;
     Vec3_t p;
     Vec3_t normal;
