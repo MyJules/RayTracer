@@ -11,6 +11,7 @@ public:
         m_a = a;
         m_b = b;
     }
+    
     Vec3_t origin() const { return m_a; }
     Vec3_t direction() const { return m_b; }
     Vec3_t pointAtParameter(Vec3_v t) const {return m_a + t*m_b;}

@@ -4,6 +4,8 @@ project(RayTracer VERSION 0.1.0)
 include(CTest)
 enable_testing()
 
+set (CMAKE_CXX_STANDARD 17)
+
 include_directories(src)
 
 #add mathfu
@@ -12,6 +14,9 @@ set(mathfu_build_tests OFF CACHE BOOL "")
 add_subdirectory(lib/mathfu mathfu)
 include_directories(lib/mathfu/include)
 include_directories(lib/mathfu/dependencies/vectorial/include)
+include_directories(lib/thread-pool)
+
+mathfu_configure_flags(RayTracer)
 
 set(SrcFolder src)
 
@@ -27,6 +32,7 @@ ${SrcFolder}/Renderer.cpp
 ${SrcFolder}/Camera.h
 ${SrcFolder}/Camera.cpp
 ${SrcFolder}/Material.h
+${SrcFolder}/Material.cpp
 ${SrcFolder}/SceneGenerator.h
 ${SrcFolder}/SceneGenerator.cpp
 )

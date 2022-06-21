@@ -24,7 +24,7 @@ Camera::Camera(Vec3_t lookFrom, Vec3_t lookAt, Vec3_t up, float vfov, float aspe
 
 }
 
-Ray Camera::getRay(Vec3_v u, Vec3_v v)
+Ray Camera::getRay(Vec3_v u, Vec3_v v) const
 {
     Vec3_t rd = Vec3_t(m_lensRadius)*randomInUnitSphere();
     Vec3_t offset = Vec3_t(u) * Vec3_t(rd.x) + Vec3_t(v) * Vec3_t(rd.y);

@@ -1,3 +1,6 @@
 [submodule "lib/mathfu"]
 	path = lib/mathfu
 	url = https://github.com/google/mathfu.git
+[submodule "lib/thread-pool"]
+	path = lib/thread-pool
+	url = https://github.com/bshoshany/thread-pool.git

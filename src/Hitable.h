@@ -10,7 +10,7 @@
 class Material;
 class Hitalbe;
 
-using HitableArr_t = std::vector<std::unique_ptr<Hitalbe>>;
+using Hitables_t = std::vector<std::unique_ptr<Hitalbe>>;
 
 struct HitRecord
 {
