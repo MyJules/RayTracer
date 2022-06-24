@@ -1,0 +1,10 @@
+add_library(Materials
+Material.cpp
+Material.h
+Dielectric.cpp
+Dielectric.h
+Lambertian.cpp
+Lambertian.h
+Metal.cpp
+Metal.h
+)

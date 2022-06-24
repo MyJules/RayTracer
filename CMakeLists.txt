@@ -7,6 +7,8 @@ enable_testing()
 set (CMAKE_CXX_STANDARD 17)
 
 include_directories(src)
+include_directories(src/Hitable/)
+include_directories(src/Materials/)
 
 #add mathfu
 set(mathfu_build_benchmarks OFF CACHE BOOL "")
@@ -20,24 +22,14 @@ mathfu_configure_flags(RayTracer)
 
 set(SrcFolder src)
 
-set(Src
-${SrcFolder}/Ray.h
-${SrcFolder}/Ray.cpp
-${SrcFolder}/Vector3.h
-${SrcFolder}/Hitable.h
-${SrcFolder}/Sphere.h
-${SrcFolder}/Sphere.cpp
-${SrcFolder}/Renderer.h
-${SrcFolder}/Renderer.cpp
-${SrcFolder}/Camera.h
-${SrcFolder}/Camera.cpp
-${SrcFolder}/Material.h
-${SrcFolder}/Material.cpp
-${SrcFolder}/SceneGenerator.h
-${SrcFolder}/SceneGenerator.cpp
-)
+#local libs
+add_subdirectory(${SrcFolder}/)
+add_subdirectory(${SrcFolder}/Hitable)
+add_subdirectory(${SrcFolder}/Materials)
 
-add_executable(RayTracer ${SrcFolder}/main.cpp ${Src})
+add_executable(RayTracer ${SrcFolder}/main.cpp)
+
+target_link_libraries(RayTracer PUBLIC Source Hittable Materials)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
