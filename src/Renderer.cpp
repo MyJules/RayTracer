@@ -60,6 +60,7 @@ Vec3_t randomInUnitSphere()
     return p;
 }
 
+// Function to render scene
 RenderResult_t render(const Camera &camera, const Hitables_t &scene, int width, int height, int ns)
 {
     RenderResult_t res;
@@ -91,6 +92,7 @@ RenderResult_t render(const Camera &camera, const Hitables_t &scene, int width, 
     return res;
 }
 
+// Render scene on different threads
 RenderResult_t renderAsync(const Camera &camera, const Hitables_t &scene, int width, int height, int ns)
 {
     BS::multi_future<Vec3_t> mf;

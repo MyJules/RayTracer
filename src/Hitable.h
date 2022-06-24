@@ -12,6 +12,7 @@ class Hitalbe;
 
 using Hitables_t = std::vector<std::unique_ptr<Hitalbe>>;
 
+// Result of ray hit
 struct HitRecord
 {
     HitRecord() = default;
@@ -23,6 +24,7 @@ struct HitRecord
     std::shared_ptr<Material> material;
 };
 
+// Base class for hittable objects
 class Hitalbe
 {
 public:

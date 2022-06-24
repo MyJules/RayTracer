@@ -3,6 +3,7 @@
 #include <Vector3.h>
 #include <Ray.h>
 
+// Handles camera math
 class Camera
 {
 public:

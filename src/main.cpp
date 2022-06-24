@@ -7,10 +7,10 @@
 #include <future>
 #include <chrono>
 
-int main(void)
+int main()
 {
-    int width = 200;
-    int height = 100;
+    int width = 1920;
+    int height = 1080;
     int ns = 100;
     std::cout << "P3\n"
               << width << " " << height << "\n255\n";

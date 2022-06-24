@@ -5,6 +5,7 @@
 #include <Material.h>
 #include <Sphere.h>
 
+// Returns world to render
 Hitables_t randomeWorld()
 {
     Hitables_t res;
