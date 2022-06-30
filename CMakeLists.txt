@@ -6,6 +6,7 @@ enable_testing()
 
 set (CMAKE_CXX_STANDARD 17)
 
+#good includes
 include_directories(src)
 include_directories(src/Hitable/)
 include_directories(src/Materials/)
@@ -17,8 +18,10 @@ add_subdirectory(lib/mathfu mathfu)
 include_directories(lib/mathfu/include)
 include_directories(lib/mathfu/dependencies/vectorial/include)
 include_directories(lib/thread-pool)
-
 mathfu_configure_flags(RayTracer)
+
+#add stb image
+include_directories(lib/stb)
 
 set(SrcFolder src)
 

@@ -2,4 +2,4 @@
 
 #include <Hitable.h>
 
-Hitables_t randomeWorld();
+Hitables_t randomWorld();

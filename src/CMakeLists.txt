@@ -8,4 +8,6 @@ Renderer.h
 SceneGenerator.cpp
 SceneGenerator.h
 Vector3.h
+Images.cpp
+Images.h
 )

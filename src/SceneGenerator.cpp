@@ -10,7 +10,7 @@
 #include <Lambertian.h>
 
 // Returns world to render
-Hitables_t randomeWorld()
+Hitables_t randomWorld()
 {
     Hitables_t res;
     res.emplace_back(std::make_unique<Sphere>(Vec3_t(0.0, -1000, 0.0), 1000, std::make_shared<Lambertian>(Vec3_t(0.5, 0.5, 0.5))));
@@ -31,7 +31,7 @@ Hitables_t randomeWorld()
                 else if (chooseMat < 0.95) // metal
                 {
                     res.emplace_back(std::make_unique<Sphere>(
-                        center, 0.2, std::make_shared<Metal>(Vec3_t(1 + drand48(), 0.5 * (1 + drand48()), 0.5 * (1 + drand48())), 0.5 * drand48())));
+                        center, 0.2, std::make_shared<Metal>(Vec3_t(0.5 *(1 + drand48()), 0.5 * (1 + drand48()), 0.5 * (1 + drand48())), 0.5 * drand48())));
                 }
                 else // glass
                 {
